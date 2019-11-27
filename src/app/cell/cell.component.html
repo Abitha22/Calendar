@@ -1,0 +1,25 @@
+<!-- <p>
+    {{myCell.date}}
+</p> -->
+<li>
+
+            
+     <input [(ngModel)]="myCell.value" [value]="value" id="hour" 
+     (blur)="updateValue()" (mouseout)="hideValue()" (mouseover)="showValue()" [placeholder]=myCell.date type="text" style="width: 100px">
+               
+    
+</li>
+<!-- if (this.myCell.value >= 8) {
+    document.getElementById('day').style.backgroundColor = 'red';
+   } else if (this.myCell.value >= 7 && this.myCell.value < 8) {
+    document.getElementById('day').style.backgroundColor = 'blue';
+   } else if (this.myCell.value < 7 && this.myCell.value > 0) {
+    document.getElementById('day').style.backgroundColor = 'grey';
+   } else {
+    document.getElementById('day').style.backgroundColor = 'white';
+   } --> <div *ngIf="myCell.value==8" style="background: red"> 
+    </div>
+    <p id="idOfTag">Your content goes here</p>
+
+    <a *ngIf="myCell.value==8"  href="#hour">Jump</a>
+    

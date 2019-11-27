@@ -1,0 +1,24 @@
+<h4>Timedata for {{startdate}} - {{enddate}}</h4>
+<div>
+        <ul class="weekdays">
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+                <li>Su</li>
+              </ul>
+              <ul class="days">  
+                    <li *ngFor="let i of date">
+                            <app-cell [myCell]="date[i-1]"
+                            (valueUpdated)="updateTotal($event)"></app-cell>
+                        </li>
+               </ul>
+   
+</div>
+ 
+<button type="button">{{total}}</button>        
+     
+   
+    

@@ -1,0 +1,21 @@
+<div>
+  <app-header [startDate]="startDateInString" [endDate]="endDateInString"></app-header>
+</div>
+<div id="cells">
+   <app-weekdays></app-weekdays>
+<ul>
+  <li class="days"></li>
+  <li class="days"></li>
+  <li class="days"></li>
+  <li class="days"></li>
+  <app-cell class="days" *ngFor="let cell of cells" [myCell]="cell"
+  (valueUpdated)="updateTotal($event)">
+
+  </app-cell>
+
+</ul>
+
+</div>
+<div style="text-align: center">
+  Total : {{currentTotal}}
+</div>
